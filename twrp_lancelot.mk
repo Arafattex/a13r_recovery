@@ -16,7 +16,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/xiaomi/lancelot/device.mk)
 
 PRODUCT_DEVICE := lancelot
-PRODUCT_NAME := omni_lancelot
+PRODUCT_NAME := twrp_lancelot
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 9
 PRODUCT_MANUFACTURER := xiaomi
