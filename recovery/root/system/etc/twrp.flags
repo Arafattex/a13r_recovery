@@ -1,0 +1,17 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# Currently we dont have e2fsck compiled. So fs check would failed.
+
+# <mount_point>  <fstype>  <device>        <device2>                  <flags>
+/system             ext4      /dev/block/mapper/system                       flags=display="System";backup=1
+/system_image       emmc      /dev/block/mapper/system                       flags=display="System image";backup=1;flashimg=1
+/vendor             ext4      /dev/block/mapper/vendor                       flags=display="Vendor";backup=1
+/vendor_image       emmc      /dev/block/mapper/vendor                       flags=display="Vendor image";backup=1;flashimg=1
+/product            ext4      /dev/block/mapper/product                      flags=display="Product";backup=1
+/product_image      emmc      /dev/block/mapper/product                      flags=display="Product image";backup=1;flashimg=1
+#/system_ext         ext4      /dev/block/mapper/system_ext                   flags=display="System_ext";backup=1
+#/system_ext_image   emmc      /dev/block/mapper/system_ext                   flags=display="System_ext image";backup=1;flashimg=1
+/external_sd      vfat     /dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="external_sd";storage;wipeingui;removable;fsflags="utf8"
+/usb-otg          vfat     /dev/block/sda1  /dev/block/sda                     flags=display="usb-otg";storage;wipeingui;removable;fsflags="utf8"
