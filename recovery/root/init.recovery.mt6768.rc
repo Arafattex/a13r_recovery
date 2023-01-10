@@ -1,3 +1,15 @@
+,# We need vold early for metadata encryption
+on early-fs
+    start vold
+
 on init
     setprop sys.usb.ffs.aio_compat 1
     setprop sys.usb.configfs 1
+
+on late-fs
+   … 
+    # Wait for keymaster
+    exec_start wait_for_keymaster
+
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.${ro.boot.hardware.platform} --late
