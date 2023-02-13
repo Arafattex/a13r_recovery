@@ -16,11 +16,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Inherit some common Twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from lancelot device
-$(call inherit-product, device/xiaomi/lancelot/device.mk)
+# Inherit from merlinx device
+$(call inherit-product, device/xiaomi/merlinx/device.mk)
 
-PRODUCT_DEVICE := lancelot
-PRODUCT_NAME := twrp_lancelot
+PRODUCT_DEVICE := merlinx
+PRODUCT_NAME := twrp_merlinx
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 9
 PRODUCT_MANUFACTURER := xiaomi
@@ -34,6 +34,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="lancelot-user 11 RP1A.200720.011 V12.5.6.0.RJCMIXM release-keys"
+    PRIVATE_BUILD_DESC="merlin-user 11 RP1A.200720.011 V12.5.4.0.RJOMIXM release-keys"
 
-BUILD_FINGERPRINT := Redmi/lancelot_global/lancelot:11/RP1A.200720.011/V12.5.6.0.RJCMIXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.4.0.RJOMIXM:user/release-keys
