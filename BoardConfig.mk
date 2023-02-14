@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/lancelot
+DEVICE_PATH := device/xiaomi/merlinx
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -48,8 +48,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := lancelot_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/lancelot
+TARGET_KERNEL_CONFIG := merlinx_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/merlinx
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
